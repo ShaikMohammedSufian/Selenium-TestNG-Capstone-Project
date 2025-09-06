@@ -76,7 +76,7 @@ public class profilemanagement {
     
     Thread.sleep(2000);
     
-    WebElement Bookingtrips = driver.findElement(By.cssSelector("#\\:rf\\: > div > div > ul > li:nth-child(4) > a > div > div > div"));
+    WebElement Bookingtrips = driver.findElement(By.xpath("//div[@id=':rf:']//li[2]//a[1]"));
     
     Bookingtrips.click();
     
@@ -88,10 +88,17 @@ public class profilemanagement {
 //    
 //    Thread.sleep(2000);
 //    
-WebElement profile1 = driver.findElement(By.xpath("//*[@id=\"b2indexPage\"]/div[2]/div/div/header/div/nav[1]/div[2]/div/span/button/span/div/div[2]/div[1]"));
+WebElement profile1 = driver.findElement(By.xpath("//span[@class='bui-f-color-complement']"));
     
     profile1.click();
     
     Thread.sleep(2000);
+    
+WebElement signout = driver.findElement(By.xpath("//button[@type='submit']"));
+    
+    signout.click();
+    
+    Thread.sleep(2000);
+    
 	}
 }
